@@ -20,10 +20,16 @@ span {
 .newTweet {
   display: flex;
   flex-flow: column;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
+  margin-bottom: 10px
 }
 
+p {
+  margin-bottom: 0px;
+}
+i {
+}
 .red {
   color: red
 }
