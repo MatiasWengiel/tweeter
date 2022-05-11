@@ -19,9 +19,18 @@ body {
   color: #545149;
   background-color: #f4f1ec;
   font-size: 24px;
-  font-family: "Source Sans Pro", sans-serif; 
+  font-family: "Source Sans Pro", sans-serif;
+  background-color: goldenrod;
 }
 
+.container {
+  display: flex;
+  max-width: 90vw;
+  margin-left:5vw;
+  flex-flow: column nowrap;
+  align-items: center;
+  background-color: inherit;
+}
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
