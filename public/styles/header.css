@@ -1,0 +1,20 @@
+header {
+  display: flex;
+  height: 400px;
+  width: 100vw;
+  justify-content: flex-end;
+  align-items: center;
+  flex-direction: column;
+  background-color: goldenrod;
+  background-image: url("https://www.transparenttextures.com/patterns/black-linen.png");
+  position: relative;
+  padding-top: 120px;
+}
+
+.userPicture {
+  max-height: 200px;
+}
+
+.userName {
+  margin-top: 0px; 
+}
