@@ -6,7 +6,7 @@ header {
   justify-content: flex-end;
   align-items: center;
   flex-direction: column;
-  background-color: goldenrod;
+  background-color: rgb(138, 102, 13);
   background-image: url("https://www.transparenttextures.com/patterns/black-linen.png");
   position: relative;
   padding-top: 120px;
