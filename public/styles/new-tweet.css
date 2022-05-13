@@ -5,4 +5,23 @@
 }
 #tweet-text {
   width: 100%;
+  background: inherit;
+  border: 0px;
+  border-bottom: 2px solid black;
+  outline: none;
+}
+
+.button-and-counter {
+  width: 100%;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  z-index: 1;
+}
+
+.button-and-counter > button {
+  font-family: Bungee, sans-serif;
+  background: #4056a1;
+  color: #FFFFFF;
+  border: 0px;
 }

@@ -5,6 +5,7 @@ nav {
   color: #FFFFFF;
   height: 120px;
   width: 100vw;
+  max-width:100%;
   flex-flow: row;
   justify-content: space-between;
   position: absolute;
