@@ -8,12 +8,10 @@ $(document).ready(function() {
     counter.val(function () {
       const output = 140 - textLength;
 
-      if (output < 0) {
-        counter.css('color', 'red')
-      } else { //Needed to turn color back to black if user deletes extra characters
-        counter.css('color', 'black')
-      }
+      output < 0 ? counter.css('color', 'red') : counter.css('color', 'black');
+      
       return output;
     }) 
+
   })
 })
