@@ -47,36 +47,28 @@ $(document).ready( function () {
 
   }
 
-  const tweets = [
-    {
-      "user": {
-        "name": "Newton",
-        "avatars": "https://i.imgur.com/73hZDYK.png",
-        "handle": "@SirIsaac"
-      },
-      "content": {
-        "text": "If I have seen further it is by standing on the shoulders of giants"
-      },
-      "created_at": 1652722226829
-    },
-    {
-      "user": {
-        "name": "Descartes",
-        "avatars": "https://i.imgur.com/nlhLi3I.png",
-        "handle": "@rd"
-      },
-      "content": {
-        "text": "Je pense , donc je suis"
-      },
-      "created_at": 1652808626829
-    }
-  ]
+  // const clearTweets = function() {
+  //   $('article').remove();
+  // }
 
-  renderTweets(tweets);
-  
+  const loadTweets = function() {
+    $.get('/tweets/')
+    .then(function(data) {
+     renderTweets(data)
+    })
+  }
+
+ loadTweets()
+
+  // renderTweets(tweets);
+
   $('form').submit(function(event) {
     event.preventDefault();
-    alert('Ha! Stopped you from submitting')
+    const data = $(this).serialize();
+    $.post('/tweets/', data)
+      .then($('textarea').val(""))
+      // .then(clearTweets())
+      // .then(loadTweets())
   }
     
   )
