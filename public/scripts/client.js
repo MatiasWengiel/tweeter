@@ -43,7 +43,7 @@ $(document).ready( function () {
   const renderTweets = function(tweets) {
     for (const tweet of tweets) {
       const newTweet = createTweetElement(tweet);
-      $('main').append(newTweet)
+      $('.new-tweet').after(newTweet)
     }
 
   }
@@ -64,7 +64,7 @@ $(document).ready( function () {
   $('form').submit(function(event) {
     event.preventDefault();
     const data = $(this).serialize();
-    
+
     //Tweet validation
     if (!$('textarea').val()) {
       alert('It seems you forgot to write your tweet!');
