@@ -44,3 +44,11 @@ article > footer {
 article > footer > menu {
   margin: 0px;
 }
+
+article:hover {
+  box-shadow: 5px 5px darkgoldenrod;
+}
+
+i:hover {
+  color: darkgoldenrod;
+}
