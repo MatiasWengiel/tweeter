@@ -1,0 +1,46 @@
+article { 
+  border: 2px solid black;
+  margin-top: 40px;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  width: 90vw;
+}
+article > header {
+  display: flex;
+  justify-content: space-between;
+  width: 95%;
+  max-width: 95%;
+  padding: 5px 0px;
+  align-items: center;
+}
+
+header .img-username {
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+  padding: 0.5em;
+
+}
+
+header .img-username > img {
+  width: 50px;
+}
+
+.tweet-text {
+  margin: 1em 0.5em;
+  width: 95%;
+  
+}
+article > footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5em 1em;
+  width: 98%;
+  border-top: 2px solid black;
+  font-size: 0.75em;
+}
+
+article > footer > menu {
+  margin: 0px;
+}
