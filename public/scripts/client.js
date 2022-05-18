@@ -73,5 +73,11 @@ $(document).ready( function () {
   ]
 
   renderTweets(tweets);
-
+  
+  $('form').submit(function(event) {
+    event.preventDefault();
+    alert('Ha! Stopped you from submitting')
+  }
+    
+  )
 })
