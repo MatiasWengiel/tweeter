@@ -13,6 +13,7 @@ $(document).ready( function () {
     const handle = tweet.user.handle;
     const tweetText = tweet.content.text;
     const tweetTime = tweet.created_at;
+    const timeAgo = timeago.format(tweetTime);
 
     const $tweetArticle =  `
       <article class="tweet">
@@ -27,7 +28,7 @@ $(document).ready( function () {
         <p class="tweet-text">${tweetText}</p>
 
         <footer>
-          <ins datetime="...">${tweetTime}</ins>
+          <ins datetime="...">${timeAgo}</ins>
           <menu>
             <i class="fa-solid fa-flag"></i>
             <i class="fa-solid fa-retweet"></i>
