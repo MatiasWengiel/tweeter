@@ -66,7 +66,10 @@ $(document).ready( function () {
     event.preventDefault();
     const data = $(this).serialize();
     $.post('/tweets/', data)
+      //First reset textarea and counter
       .then($('textarea').val(""))
+      .then($('.counter').val(140))
+      //Then render the new tweet (TODO)
       // .then(clearTweets())
       // .then(loadTweets())
   }
