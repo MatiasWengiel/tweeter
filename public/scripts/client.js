@@ -40,22 +40,22 @@ $(document).ready( function () {
     return $tweetArticle;
   }
 
+  let numberOfTweetsAlreadyRendered = 0; 
+
   const renderTweets = function(tweets) {
-    for (const tweet of tweets) {
-      const newTweet = createTweetElement(tweet);
+    for (let tweet = numberOfTweetsAlreadyRendered; tweet < tweets.length; tweet++) {
+      const newTweet = createTweetElement(tweets[tweet]);
       $('.new-tweet').after(newTweet)
+      numberOfTweetsAlreadyRendered++
     }
 
   }
-
-  // const clearTweets = function() {
-  //   $('article').remove();
-  // }
 
   const loadTweets = function() {
     $.get('/tweets/')
     .then(function(data) {
      renderTweets(data)
+     console.log(numberOfTweets)
     })
   }
 
@@ -81,9 +81,8 @@ $(document).ready( function () {
       //First reset textarea and counter
       .then($('textarea').val(""))
       .then($('.counter').val(140))
-      //Then render the new tweet (TODO)
-      // .then(clearTweets())
-      // .then(loadTweets())
+      //Then render the new tweet and any other tweets that had not been rendered yet
+      .then(loadTweets())
   }
     
   )
