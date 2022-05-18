@@ -61,11 +61,22 @@ $(document).ready( function () {
 
  loadTweets()
 
-  // renderTweets(tweets);
-
   $('form').submit(function(event) {
     event.preventDefault();
     const data = $(this).serialize();
+    
+    //Tweet validation
+    if (!$('textarea').val()) {
+      alert('It seems you forgot to write your tweet!');
+      return
+    }
+
+    if($('.counter').val() < 0) {
+      alert('Whoops! Your tweet is too long. The maximum length is 140 characters.')
+      return
+    }
+
+    //Post tweet after validation
     $.post('/tweets/', data)
       //First reset textarea and counter
       .then($('textarea').val(""))
