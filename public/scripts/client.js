@@ -7,6 +7,12 @@
 
 $(document).ready(function() {
 
+  const escapeUserInputText = function(text) {
+    let div = document.createElement("div");
+    div.appendChild(document.createTextNode(text));
+    return div.innerHTML;
+  }
+
   const createTweetElement = function(tweet) {
     const userName = tweet.user.name;
     const avatar = tweet.user.avatars;
@@ -19,13 +25,13 @@ $(document).ready(function() {
       <article class="tweet">
         <header>
           <section class="img-username">
-            <img src="${avatar}">
-            <p>${userName}</p>
+            <img src="${escapeUserInputText(avatar)}">
+            <p>${escapeUserInputText(userName)}</p>
           </section>
-          <p>${handle}</p>
+          <p>${escapeUserInputText(handle)}</p>
         </header>
 
-        <p class="tweet-text">${tweetText}</p>
+        <p class="tweet-text">${escapeUserInputText(tweetText)}</p>
 
         <footer>
           <ins datetime="...">${timeAgo}</ins>
@@ -40,7 +46,7 @@ $(document).ready(function() {
     return $tweetArticle;
   };
 
-  let numberOfTweetsAlreadyRendered = 0;
+  let numberOfTweetsAlreadyRendered = 0; 
 
   const renderTweets = function(tweets) {
     for (let tweet = numberOfTweetsAlreadyRendered; tweet < tweets.length; tweet++) {
@@ -53,8 +59,8 @@ $(document).ready(function() {
 
   const loadTweets = function() {
     $.get('/tweets/')
-      .then(function(data) {
-        renderTweets(data);
+      .then(function(tweetsData) {
+        renderTweets(tweetsData);
       });
   };
 
@@ -63,7 +69,6 @@ $(document).ready(function() {
   $('form').submit(function(event) {
     event.preventDefault();
     const data = $(this).serialize();
-
     //Tweet validation
     if (!$('textarea').val()) {
       alert('It seems you forgot to write your tweet!');
@@ -74,15 +79,15 @@ $(document).ready(function() {
       alert('Whoops! Your tweet is too long. The maximum length is 140 characters.');
       return;
     }
-
     //Post tweet after validation
     $.post('/tweets/', data)
-      //First reset textarea and counter
-      .then($('textarea').val(""))
-      .then($('.counter').val(140))
-      //Then render the new tweet and any other tweets that had not been rendered yet
-      .then(loadTweets());
-  }
-    
-  );
+
+      .then(() => {
+        //First reset textarea and counter
+        $('textarea').val("")
+        $('.counter').val(140)
+        //Then render the new tweet and any other tweets that had not been rendered yet
+        loadTweets()
+      })
+  });
 });
