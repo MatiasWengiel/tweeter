@@ -11,7 +11,7 @@ $(document).ready(function() {
     let div = document.createElement("div");
     div.appendChild(document.createTextNode(text));
     return div.innerHTML;
-  }
+  };
 
   const createTweetElement = function(tweet) {
     const userName = tweet.user.name;
@@ -46,7 +46,7 @@ $(document).ready(function() {
     return $tweetArticle;
   };
 
-  let numberOfTweetsAlreadyRendered = 0; 
+  let numberOfTweetsAlreadyRendered = 0;
 
   const renderTweets = function(tweets) {
     for (let tweet = numberOfTweetsAlreadyRendered; tweet < tweets.length; tweet++) {
@@ -76,16 +76,12 @@ $(document).ready(function() {
 
     //Tweet validation
     if (!$('#tweet-text').val()) {
-      console.log('in function');
-      // $('.new-tweet').before('<p class="error-bar">You may have forgotten something, your tweet appears to be empty!</p>')
-      $( ".empty-tweet" ).slideDown( "slow")
+      $(".empty-tweet").slideDown("slow");
       return;
     }
 
     if ($('.counter').val() < 0) {
-      $('.too-many-chars').slideDown('slow')
-      // $('.new-tweet').before('')
-      // $('p').slideDown(1000000000);
+      $('.too-many-chars').slideDown('slow');
       return;
     }
     //Post tweet after validation
@@ -93,10 +89,10 @@ $(document).ready(function() {
 
       .then(function() {
         //First reset textarea and counter
-        $('textarea').val("")
-        $('.counter').val(140)
+        $('textarea').val("");
+        $('.counter').val(140);
         //Then render the new tweet and any other tweets that had not been rendered yet
-        loadTweets()
-      })
+        loadTweets();
+      });
   });
 });
