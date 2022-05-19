@@ -31,7 +31,7 @@ $(document).ready(function() {
           <p>${escapeUserInputText(handle)}</p>
         </header>
 
-        <p class="tweet-text">${escapeUserInputText(tweetText)}</p>
+        <p class="tweet-content">${escapeUserInputText(tweetText)}</p>
 
         <footer>
           <ins datetime="...">${timeAgo}</ins>

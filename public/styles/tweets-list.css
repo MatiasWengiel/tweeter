@@ -27,9 +27,10 @@
   width: 50px;
 }
 
-.tweet-text {
+.tweet-content {
   margin: 1em 0.5em;
   width: 95%;
+  overflow-wrap: break-word;
   
 }
 .tweet > footer {
