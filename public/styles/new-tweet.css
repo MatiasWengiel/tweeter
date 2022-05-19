@@ -29,3 +29,10 @@
 .counter {
   font-family: Bungee, sans-serif;
 }
+
+.error-bar {
+  width: 100%;
+  text-align: center;
+  color: #721c24;
+  background-color: #db677099;
+}

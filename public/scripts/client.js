@@ -69,20 +69,24 @@ $(document).ready(function() {
   $('form').submit(function(event) {
     event.preventDefault();
     const data = $(this).serialize();
+
+    //Clears any existing error bars upon submission of the form
+    $('p').remove('.error-bar')
+
     //Tweet validation
-    if (!$('textarea').val()) {
-      alert('It seems you forgot to write your tweet!');
+    if (!$('#tweet-text').val()) {
+      $('.new-tweet').before('<p class="error-bar">You may have forgotten something, your tweet appears to be empty!</p>')
       return;
     }
 
     if ($('.counter').val() < 0) {
-      alert('Whoops! Your tweet is too long. The maximum length is 140 characters.');
+      $('.new-tweet').before('<p class="error-bar">Whoops! Your tweet is too long. The maximum length is 140 characters.</p>')
       return;
     }
     //Post tweet after validation
     $.post('/tweets/', data)
 
-      .then(() => {
+      .then(function() {
         //First reset textarea and counter
         $('textarea').val("")
         $('.counter').val(140)

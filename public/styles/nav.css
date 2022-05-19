@@ -23,7 +23,7 @@ span {
   margin-bottom: 24px;
 }
 
-.newTweet {
+nav .newTweet {
   display: flex;
   flex-flow: column;
   align-items: center;
