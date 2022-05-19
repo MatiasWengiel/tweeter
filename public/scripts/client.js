@@ -65,22 +65,27 @@ $(document).ready(function() {
   };
 
   loadTweets();
+ 
 
   $('form').submit(function(event) {
     event.preventDefault();
     const data = $(this).serialize();
 
     //Clears any existing error bars upon submission of the form
-    $('p').remove('.error-bar')
+    $('.error-bar').slideUp();
 
     //Tweet validation
     if (!$('#tweet-text').val()) {
-      $('.new-tweet').before('<p class="error-bar">You may have forgotten something, your tweet appears to be empty!</p>')
+      console.log('in function');
+      // $('.new-tweet').before('<p class="error-bar">You may have forgotten something, your tweet appears to be empty!</p>')
+      $( ".empty-tweet" ).slideDown( "slow")
       return;
     }
 
     if ($('.counter').val() < 0) {
-      $('.new-tweet').before('<p class="error-bar">Whoops! Your tweet is too long. The maximum length is 140 characters.</p>')
+      $('.too-many-chars').slideDown('slow')
+      // $('.new-tweet').before('')
+      // $('p').slideDown(1000000000);
       return;
     }
     //Post tweet after validation
