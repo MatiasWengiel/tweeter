@@ -1,6 +1,6 @@
 nav {
   display: flex;
-  padding: 1.5em;
+  padding: 0em 1.5em;
   background: #4056a1;
   color: #FFFFFF;
   height: 120px;
@@ -8,6 +8,7 @@ nav {
   max-width:100%;
   flex-flow: row;
   justify-content: space-between;
+  align-items: center;
   position: fixed;
   top: 0;
   z-index: 1;
@@ -15,7 +16,7 @@ nav {
 
 span {
   font-family: Bungee, sans-serif;
-  font-size: 40px;
+  font-size: 35px;
 }
 
 .logo {
