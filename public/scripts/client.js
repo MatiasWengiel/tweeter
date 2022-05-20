@@ -24,6 +24,8 @@ $(document).ready(function() {
 
   $('.scroll-to-top').click(function() {
     $(window).scrollTop(0)
+    $('.new-tweet').show();
+    $('#tweet-text').focus();
   })
 
   $(window).off('scroll', function() {
