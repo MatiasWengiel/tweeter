@@ -19,6 +19,11 @@ span {
   font-size: 35px;
 }
 
+button {
+  background: inherit;
+  border: inherit;
+  color: inherit;
+}
 .logo {
   margin-top: 24px;
   margin-bottom: 24px;

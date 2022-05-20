@@ -7,6 +7,12 @@
 
 $(document).ready(function() {
 
+  $('button.newTweet').click(function() {
+    $('.new-tweet').slideToggle();
+    $('#tweet-text').focus()
+
+  })
+
   const escapeUserInputText = function(text) {
     let div = document.createElement("div");
     div.appendChild(document.createTextNode(text));

@@ -1,5 +1,5 @@
 .new-tweet {
-  display: flex;
+  display: none;
   width: 100%;
   flex-flow: column nowrap;
 }
