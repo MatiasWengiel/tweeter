@@ -72,7 +72,7 @@ $(document).ready(function() {
     const data = $(this).serialize();
 
     //Clears any existing error bars upon submission of the form
-    $('.error-bar').slideUp();
+    // $('.error-bar').slideUp();
 
     //Tweet validation
     if (!$('#tweet-text').val()) {
