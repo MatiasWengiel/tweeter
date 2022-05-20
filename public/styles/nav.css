@@ -33,7 +33,8 @@ nav .newTweet {
   display: flex;
   flex-flow: column;
   align-items: center;
-  padding-top: 10px
+  padding-top: 10px;
+  cursor: pointer;
 }
 
 p {
