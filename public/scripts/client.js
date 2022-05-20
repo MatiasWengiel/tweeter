@@ -13,6 +13,23 @@ $(document).ready(function() {
 
   })
 
+
+  $(window).scroll(function() {
+    if ($(window).scrollTop() !== 0) {
+      $('.scroll-to-top').show()
+    } else {
+      $('.scroll-to-top').hide()
+    }
+  })
+
+  $('.scroll-to-top').click(function() {
+    $(window).scrollTop(0)
+  })
+
+  $(window).off('scroll', function() {
+    $('.scroll-to-top').hide();
+  })
+
   const escapeUserInputText = function(text) {
     let div = document.createElement("div");
     div.appendChild(document.createTextNode(text));

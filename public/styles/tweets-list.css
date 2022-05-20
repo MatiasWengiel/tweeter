@@ -53,3 +53,21 @@
 i:hover {
   color: darkgoldenrod;
 }
+
+.scroll-to-top {
+  display: none;
+  background: #4056a1;
+  color: #FFFFFF;
+  border-radius: 50%;
+  width: 3em;
+  height: 3em;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  z-index: 1;
+  cursor: pointer;
+}
+
+.scroll-to-top:hover .fa-solid {
+  color: goldenrod;
+}
