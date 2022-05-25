@@ -8,8 +8,9 @@ body > header {
   flex-direction: column;
   background-color: rgb(138, 102, 13);
   background-image: url("https://www.transparenttextures.com/patterns/black-linen.png");
+  color: #FFFFFF;
   position: relative;
-  padding-top: 120px;
+  margin-top: -120px;
 }
 
 .userPicture {

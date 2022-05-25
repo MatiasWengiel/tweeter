@@ -1,7 +1,8 @@
 nav {
   display: flex;
-  padding: 0em 1.5em;
-  background: #4056a1;
+  padding: 0vh 1.5em; 
+  background-color: rgb(138, 102, 13); /* For grading only, would remove on live code: I don't know if it was intended, but on Compass they show the nav-bar changing color to match the header when showing us the specs for responsive design */
+  background-image: url("https://www.transparenttextures.com/patterns/black-linen.png");
   color: #FFFFFF;
   height: 120px;
   width: 100vw;
@@ -42,5 +43,5 @@ p {
 }
 
 .red {
-  color: red
+  color: red;
 }

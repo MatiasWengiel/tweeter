@@ -2,6 +2,7 @@
 <html lang="en">
   <head>
     <!-- Meta Information -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tweeter - Home Page</title>
 
     <!-- External CSS -->
@@ -16,6 +17,7 @@
     <link rel="stylesheet" href="/styles/header.css" type="text/css" />
     <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
     <link rel="stylesheet" href="/styles/tweets-list.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/responsive.css" type="text/css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <!-- External JS -->
@@ -53,11 +55,13 @@
 
     <!-- Page-specific (main) content here -->
     <main class="container">
-      <!-- Error bars are hidden until triggered-->
-      <p class="error-bar empty-tweet">You may have forgotten something, your tweet appears to be empty!</p>
-      <p class="error-bar too-many-chars">Whoops! Your tweet is too long. The maximum length is 140 characters.</p>
-      <!-- Content below is always visible -->
+
       <section class="new-tweet">
+         <!-- Error bars are hidden until triggered-->
+        <p class="error-bar empty-tweet">You may have forgotten something, your tweet appears to be empty!</p>
+        <p class="error-bar too-many-chars">Whoops! Your tweet is too long. The maximum length is 140 characters.</p>
+
+        <!-- Content below is always visible -->
         <h2>Compose Tweet</h2>
         <form action="/tweets/" method="POST">
           <label for="tweet-text">What are you humming about?</label>
@@ -68,6 +72,9 @@
           </div>
         </form>
       </section>
+      <div class="tweet-list">
+        <!-- Existing tweets will be added here -->
+      </div>
       <button type="button" class="scroll-to-top">
         <i class="fa-solid fa-angles-up"></i>
       </button>

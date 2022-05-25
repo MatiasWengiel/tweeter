@@ -33,7 +33,7 @@
 .error-bar {
 
   z-index: 1;
-  width: 90vw;
+  width: 100%;
   vertical-align: middle;
   line-height: 1.4em;
   text-align: center;

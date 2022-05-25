@@ -1,0 +1,45 @@
+
+@media screen and (min-width: 1024px) {
+  body {
+    display: flex;
+    flex-flow: row;
+    align-items: flex-start;
+  }
+
+  nav {
+  background-color: #4056A1;
+  background-image: none;
+  }
+
+  body > header {
+    justify-content: center;
+    width: 25vw;
+    height: auto;
+    float: left;
+    margin: 2.5vw 2.5vw;
+    padding: 15px 0px;
+    position: relative;
+  }
+
+  .userName {
+    margin: 0px;
+  }
+
+  .container { 
+    width: 65vw;
+    margin: 0px;
+  }
+
+  .new-tweet {
+    margin-top: 2.5vw;
+  }
+
+  .new-tweet > h2 {
+    margin-top: 0px;
+  }
+
+  .tweet {
+    margin-top: 2.5vw;
+    margin-bottom: 2.5vw;
+  }
+}
