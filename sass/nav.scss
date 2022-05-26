@@ -1,0 +1,53 @@
+@import 'variables.scss';
+
+nav {
+  @include header-theme;
+  display: flex;
+  flex-flow: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0vh 1.5em; 
+  height: 120px;
+  width: 100vw;
+  max-width:100%;
+  position: fixed;
+  top: 0;
+  z-index: 100;
+  
+  button {
+    background: transparent;
+    border: inherit;
+    color: inherit;
+    font-family: $font-general;
+  }
+
+  .logo {
+    margin-top: 24px;
+    margin-bottom: 24px;
+    font-family: $font-highlighted;
+    font-size: 35px;
+  }
+
+  .newTweet {
+    @include flex-center-column;
+    padding-top: 10px;
+    cursor: pointer;
+  }
+
+  p {
+    margin: 0px;
+  }
+  
+  .red {
+    color: red;
+  }
+
+}
+
+
+
+
+
+
+
+

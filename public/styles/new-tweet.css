@@ -1,43 +1,30 @@
 .new-tweet {
   display: none;
   width: 100%;
-  flex-flow: column nowrap;
 }
-#tweet-text {
+.new-tweet #tweet-text {
   width: 100%;
   background: inherit;
   border: 0px;
   border-bottom: 2px solid black;
   outline: none;
 }
-
-.button-and-counter {
-  width: 100%;
+.new-tweet .button-and-counter {
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
+  width: 100%;
   z-index: 1;
-}
-
-.button-and-counter > button {
-  font-family: Bungee, sans-serif;
-  background: #4056a1;
-  color: #FFFFFF;
-  border: 0px;
-}
-
-.counter {
   font-family: Bungee, sans-serif;
 }
-
-.error-bar {
-
+.new-tweet .error-bar {
   z-index: 1;
   width: 100%;
   vertical-align: middle;
   line-height: 1.4em;
   text-align: center;
   color: #721c24;
-  background-color: #db677099;
+  background-color: rgba(219, 103, 112, 0.6);
   display: none;
+  margin: 0px;
 }

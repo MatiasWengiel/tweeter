@@ -1,0 +1,56 @@
+/*
+ * http://www.paulirish.com/2012/box-sizing-border-box-ftw/
+ * https://css-tricks.com/international-box-sizing-awareness-day/
+ * Do not modify these two selectors, please
+ */
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+/*
+ * Global layout stuff
+ */
+ @import 'variables.scss';
+
+body {
+  @include general-theme;
+  @include flex-center-column;
+  margin-top: 120px;
+  font-size: 24px;
+
+  .container {
+    @include flex-center-column;
+    flex-wrap: wrap;
+    width: 90vw;
+    background-color: inherit;
+  }
+  
+  .scroll-to-top {
+    display: none;
+    background: $background-highlighted;
+    color: $text-color-highlighted;
+    border-radius: 50%;
+    width: 3em;
+    height: 3em;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    z-index: 1;
+    cursor: pointer;
+  }
+  
+  .scroll-to-top:hover .fa-solid {
+    color: $background-header;
+  }
+
+  button {
+    @include highlighted-theme;
+    border: 0px;
+  }
+
+}
+
+

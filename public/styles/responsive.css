@@ -1,45 +1,37 @@
-
 @media screen and (min-width: 1024px) {
   body {
     display: flex;
     flex-flow: row;
     align-items: flex-start;
-  }
-
-  nav {
-  background-color: #4056A1;
-  background-image: none;
-  }
-
-  body > header {
     justify-content: center;
-    width: 25vw;
-    height: 400px;
-    float: left;
-    margin: 2.5vw 2.5vw;
-    padding: 15px 0px;
-    position: relative;
   }
-
-  .userName {
+  body nav {
+    background-color: #4056a1;
+    background-image: none;
+  }
+  body .container {
+    width: 65%;
     margin: 0px;
   }
-
-  .container { 
-    width: 65vw;
+  body .userName {
     margin: 0px;
   }
-
-  .new-tweet {
+  body .new-tweet {
     margin-top: 2.5vw;
   }
-
-  .new-tweet > h2 {
+  body .new-tweet > h2 {
     margin-top: 0px;
   }
-
-  .tweet {
+  body .tweet {
     margin-top: 2.5vw;
     margin-bottom: 2.5vw;
+  }
+  body header {
+    justify-content: center;
+    width: 25%;
+    height: 400px;
+    float: left;
+    margin: 2.5vw 2.5vw 2.5vw 0vw;
+    position: relative;
   }
 }

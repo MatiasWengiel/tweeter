@@ -1,47 +1,41 @@
 nav {
-  display: flex;
-  padding: 0vh 1.5em; 
-  background-color: rgb(138, 102, 13); /* For grading only, would remove on live code: I don't know if it was intended, but on Compass they show the nav-bar changing color to match the header when showing us the specs for responsive design */
-  background-image: url("https://www.transparenttextures.com/patterns/black-linen.png");
+  background-color: rgb(146, 167, 237);
+  background-image: url("https://www.transparenttextures.com/patterns/asfalt-dark.png");
   color: #FFFFFF;
-  height: 120px;
-  width: 100vw;
-  max-width:100%;
+  display: flex;
   flex-flow: row;
   justify-content: space-between;
   align-items: center;
+  padding: 0vh 1.5em;
+  height: 120px;
+  width: 100vw;
+  max-width: 100%;
   position: fixed;
   top: 0;
   z-index: 100;
 }
-
-span {
+nav button {
+  background: transparent;
+  border: inherit;
+  color: inherit;
+  font-family: "Source Sans Pro", sans-serif;
+}
+nav .logo {
+  margin-top: 24px;
+  margin-bottom: 24px;
   font-family: Bungee, sans-serif;
   font-size: 35px;
 }
-
-button {
-  background: inherit;
-  border: inherit;
-  color: inherit;
-}
-.logo {
-  margin-top: 24px;
-  margin-bottom: 24px;
-}
-
 nav .newTweet {
   display: flex;
-  flex-flow: column;
   align-items: center;
+  flex-flow: column;
   padding-top: 10px;
   cursor: pointer;
 }
-
-p {
+nav p {
   margin: 0px;
 }
-
-.red {
+nav .red {
   color: red;
 }

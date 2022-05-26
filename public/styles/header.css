@@ -1,22 +1,20 @@
 body > header {
   display: flex;
-  height: 400px;
-  width: 100vw;
-  max-width:100%;
-  justify-content: flex-end;
   align-items: center;
   flex-direction: column;
-  background-color: rgb(138, 102, 13);
-  background-image: url("https://www.transparenttextures.com/patterns/black-linen.png");
+  justify-content: flex-end;
+  height: 400px;
+  width: 100vw;
+  max-width: 100%;
+  background-color: rgb(146, 167, 237);
+  background-image: url("https://www.transparenttextures.com/patterns/asfalt-dark.png");
   color: #FFFFFF;
   position: relative;
   margin-top: -120px;
 }
-
-.userPicture {
+body > header .userPicture {
   max-height: 200px;
 }
-
-.userName {
-  margin-top: 0px; 
+body > header .userName {
+  margin-top: 0px;
 }

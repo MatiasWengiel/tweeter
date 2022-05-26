@@ -1,0 +1,39 @@
+// General Theme
+$font-general: "Source Sans Pro", sans-serif;
+$text-color-general: #1B1212;
+$background-general: #ffffff61;
+
+@mixin general-theme{
+  font-family: $font-general;
+  color: $text-color-general;
+  background-color: $background-general;
+}
+
+// Highlighted Theme
+$font-highlighted: Bungee, sans-serif;
+$text-color-highlighted: #FFFFFF;
+$background-highlighted: #4056a1;
+
+@mixin highlighted-theme {
+  font-family: $font-highlighted;
+  color: $text-color-highlighted;
+  background-color: $background-highlighted;
+}
+
+// Header Theme
+$background-header: rgb(146 167 237);
+$background-header-image: url("https://www.transparenttextures.com/patterns/asfalt-dark.png");
+$text-color-header: $text-color-highlighted; //For code readability/consistency
+
+@mixin header-theme {
+  background-color: $background-header;
+  background-image: $background-header-image;
+  color: $text-color-header;
+}
+
+// Flexbox mixins
+@mixin flex-center-column {
+  display: flex;
+  align-items: center;
+  flex-flow: column;
+}

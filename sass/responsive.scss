@@ -1,0 +1,48 @@
+@import 'variables.scss';
+
+@media screen and (min-width: 1024px) {
+  body {
+    display: flex;
+    flex-flow: row;
+    align-items: flex-start;
+    justify-content: center;
+
+    nav {
+      background-color: $background-highlighted;
+      background-image: none;
+      }
+
+    .container { 
+      width: 65%;
+      margin: 0px;
+    }
+
+    
+    .userName {
+      margin: 0px;
+    }
+
+      .new-tweet {
+      margin-top: 2.5vw;
+    }
+
+    .new-tweet > h2 {
+      margin-top: 0px;
+    }
+
+    .tweet {
+      margin-top: 2.5vw;
+      margin-bottom: 2.5vw;
+    }
+
+    header {
+      justify-content: center;
+      width: 25%;
+      height: 400px;
+      float: left;
+      margin: 2.5vw 2.5vw 2.5vw 0vw;
+      position: relative;
+    }
+  }
+}
+

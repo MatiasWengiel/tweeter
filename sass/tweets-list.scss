@@ -1,0 +1,61 @@
+@import 'variables.scss';
+
+.tweet-list {
+  width: 100%;
+}
+
+.tweet { 
+  @include flex-center-column;
+  border: 2px solid black;
+  margin-top: 20px;
+  width: 100%;
+
+  header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: auto;
+    margin: 0px;
+    width: 95%;
+    max-width: 95%;
+    padding: 5px 0px;
+
+  }
+
+  .img-username {
+    display: flex;
+    align-items: center;
+    padding: 0.5em;
+    img {
+      width: 50px;
+    }
+  }
+
+  .tweet-content {
+    margin: 1em 0.5em;
+    width: 95%;
+    overflow-wrap: break-word;
+    
+  }
+  footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5em 1em;
+    width: 98%;
+    border-top: 2px solid black;
+    font-size: 0.75em;
+  }
+
+  menu {
+    margin: 0px;
+    i:hover {
+      color: $background-header;
+    }
+  }
+
+}
+
+.tweet:hover {
+  box-shadow: 5px 5px $background-header;
+}
+
