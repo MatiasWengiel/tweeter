@@ -12,11 +12,11 @@ Tweeter is a simple, single-page Twitter clone created for the Lighthouse Labs w
 
 ## Screenshots
 
-View on wide screen devices: 
+### View on wide screen devices: 
 
 !["View on wide screen devices"](https://github.com/MatiasWengiel/tweeter/blob/master/docs/tweeter-wide-screen-view.jpg)
 
-View on small screen devices:
+### View on small screen devices:
 
 !["View on small screen devices"](https://github.com/MatiasWengiel/tweeter/blob/master/docs/tweeter-narrow-screen-view.jpg)
 
