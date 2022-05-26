@@ -9,28 +9,28 @@ $(document).ready(function() {
 
   $('button.newTweet').click(function() {
     $('.new-tweet').slideToggle();
-    $('#tweet-text').focus()
+    $('#tweet-text').focus();
     
     if ($('.error-bar').css('display') !== 'none') {
-      $('.error-bar').slideUp()
+      $('.error-bar').slideUp();
     }
 
-  })
+  });
 
 
   $(window).scroll(function() {
     if ($(window).scrollTop() !== 0) {
-      $('.scroll-to-top').show()
+      $('.scroll-to-top').show();
     } else {
-      $('.scroll-to-top').hide()
+      $('.scroll-to-top').hide();
     }
-  })
+  });
 
   $('.scroll-to-top').click(function() {
-    $(window).scrollTop(0)
+    $(window).scrollTop(0);
     $('.new-tweet').show();
     $('#tweet-text').focus();
-  })
+  });
 
   const loadTweets = function() {
     $.get('/tweets/')
