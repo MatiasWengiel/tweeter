@@ -10,6 +10,7 @@ $(document).ready(function() {
   $('button.newTweet').click(function() {
     $('.new-tweet').slideToggle();
     $('#tweet-text').focus()
+    
     if ($('.error-bar').css('display') !== 'none') {
       $('.error-bar').slideUp()
     }

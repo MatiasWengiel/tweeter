@@ -43,7 +43,7 @@
   const renderTweets = function(tweets) {
     for (let tweet = numberOfTweetsAlreadyRendered; tweet < tweets.length; tweet++) { //Only renders new tweets
       const newTweet = createTweetElement(tweets[tweet]);
-      $('.tweet-list').append(newTweet);
+      $('.tweet-list').prepend(newTweet);
       numberOfTweetsAlreadyRendered++;
     }
 

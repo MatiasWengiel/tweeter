@@ -1,5 +1,4 @@
 $(document).ready(function() {
-  console.log('Server ready to dynamically generate counter');
 
   $("#tweet-text").on('input', function() {
     let textLength = $(this).val().length;
